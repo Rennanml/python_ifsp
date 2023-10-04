@@ -1,0 +1,5 @@
+print('Olá!! Bem-Vindo à nossa calculadora!! digite dois números que deseja somar:')
+nmr1 = int(input())
+nmr2 = int(input())
+print('O resultado da soma é:', end=' ')
+print(nmr1 + nmr2)
