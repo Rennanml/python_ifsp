@@ -1,0 +1,14 @@
+nota = int(input('Digite a nota\n'))
+conceito = 'x'
+
+if nota >= 86 and nota <= 100:
+    conceito = 'A'
+elif nota >= 61 and nota <= 85:
+    conceito = 'B'
+elif nota >= 36 and nota <= 60:
+    conceito = 'C'
+elif nota >= 1 and nota <= 35:
+    conceito = 'D'
+elif nota == 0:
+    conceito = 'E'
+print(f'O conceito do aluno é: {conceito}')
