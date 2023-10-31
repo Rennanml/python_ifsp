@@ -61,4 +61,6 @@ class Agenda:
 menu = 0
 while menu != 6:
     menu = int(input('Digite a opção: '))
+    if menu == 1:
+        ...
     
