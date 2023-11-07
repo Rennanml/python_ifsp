@@ -59,8 +59,64 @@ class Agenda:
         del self.contatos[pos]
 
 menu = 0
+contatos = [] 
+
+menu = 0
 while menu != 6:
+    print("Opções:")
+    print("1. Adicionar contato")
+    print("2. Exibir contato")
+    print("3. Excluir contato")
+    print("4. Alterar contato")
+    print("5. Listar todos os contatos")
+    print("6. Sair")
+
     menu = int(input('Digite a opção: '))
+
     if menu == 1:
-        ...
+        nome = input("Digite o nome do contato: ")
+        contato = Contato(nome)
+        contatos.append(contato)
+        
+    elif menu == 2:
+        nome = input("Digite o nome do contato que deseja exibir: ")
+        for contato in contatos:
+            if contato.nome == nome:
+                contato.exibir_contato()
+                break
+        else:
+            print("Contato não encontrado.")
+    
+    elif menu == 3:
+        nome = input("Digite o nome do contato que deseja excluir: ")
+        for contato in contatos:
+            if contato.nome == nome:
+                contatos.remove(contato)
+                print("Contato excluído com sucesso.")
+                break
+        else:
+            print("Contato não encontrado.")
+    
+    elif menu == 4:
+        nome = input("Digite o nome do contato que deseja modificar: ")
+        for contato in contatos:
+            if contato.nome == nome:
+                novo_nome = input("Digite o novo nome: ")
+                contato.alterar_nome(novo_nome)
+                print("Nome alterado com sucesso.")
+                break
+        else:
+            print("Contato não encontrado.")
+
+    elif menu == 5:
+        if contatos:
+            print("Lista de Contatos:")
+            for contato in contatos:
+                contato.exibir_contato()
+        else:
+            print("Nenhum contato registrado.")
+    
+    elif menu == 6:
+        print("Saindo do programa.")
+    
     
