@@ -1,0 +1,3 @@
+1	aluno 1	aluno1@ifsp
+2	aluno 2	aluno1@ifsp
+3	aluno 3	aluno1@ifsp
