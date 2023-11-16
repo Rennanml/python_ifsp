@@ -13,6 +13,16 @@ def arquivar_dados():
         linha = f'{key}\t{item}\t{preco}\t{qnt}\n'
         ref_arq.write(linha)
     ref_arq.close()
+def arquivar_dados2():
+    ref_arq = open("./1113/exercicio3.txt", 'w')
+    for chave in dic2:
+        key = chave
+        item = dic2[chave][0]
+        preco, qnt = dic2[chave][1]
+        linha = f'{key}\t{item}\t{preco}\t{qnt}\n'
+        ref_arq.write(linha)
+    ref_arq.close()
+
 
 dic2 = {}
 def mostrar_dados():
@@ -46,5 +56,6 @@ def inserir_produto(dic):
         return "Produto adicionado com sucesso!"
     
 print(inserir_produto(dic2))
-print(dic2)
 arquivar_dados()
+arquivar_dados2()
+print(dic2)
