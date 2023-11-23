@@ -1,0 +1,3 @@
+m	18	sim	sul	ensino medio
+f	74	nao	norte	ensino superior
+f	26	nao	sul	todos
